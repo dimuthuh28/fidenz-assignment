@@ -6,7 +6,7 @@
 
 ## Quick Start
 
-### Backend
+### How to Run
 
 ```bash
 cd backend
