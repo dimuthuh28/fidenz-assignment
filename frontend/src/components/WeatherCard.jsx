@@ -1,14 +1,6 @@
 import React from 'react';
 import { X, Wind, Sun, Droplets, Thermometer } from 'lucide-react';
 
-/**
- * Expected `weather` shape (adjust keys if your API uses different names):
- * {
- *   name, description, icon, temp, minTemp, maxTemp,
- *   humidity, windSpeed, pressure, visibility, fromCache, error
- * }
- */
-
 const gradientMap = {
   Clear: 'from-green-400 to-emerald-400',
   Clouds: 'from-indigo-500 to-violet-500',
@@ -44,7 +36,6 @@ const WeatherCard = ({ weather, onClose }) => {
 
   return (
     <div className="rounded-lg overflow-hidden shadow-lg">
-      {/* Header (colored gradient) */}
       <div className={`p-5 bg-gradient-to-r ${gradientClass}`}>
         <div className="flex items-start justify-between">
           <div>
@@ -81,7 +72,6 @@ const WeatherCard = ({ weather, onClose }) => {
           </div>
 
           <div className="text-right">
-            {/* Optional extra icon or emoji */}
             <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center text-2xl text-white/95">
               {weather.iconEmoji || ''}
             </div>
@@ -89,7 +79,6 @@ const WeatherCard = ({ weather, onClose }) => {
         </div>
       </div>
 
-      {/* Footer (dark details) */}
       <div className="bg-gray-800 p-4 flex flex-col gap-3">
         <div className="flex items-center justify-between text-sm text-gray-300">
           <div>

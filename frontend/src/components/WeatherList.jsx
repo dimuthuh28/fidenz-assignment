@@ -33,11 +33,9 @@ const WeatherList = () => {
   }, []);
 
   const handleAddCity = async () => {
-    // placeholder — integrate with your add-city API or modal
     if (!query.trim()) return;
     try {
-      // Example: await weatherApi.addCity({ name: query })
-      // then refetch:
+      
       await fetchWeatherData();
       setQuery('');
     } catch (e) {
